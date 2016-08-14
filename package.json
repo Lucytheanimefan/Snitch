@@ -14,5 +14,8 @@
     "file-system": "^2.2.1",
     "path": "^0.12.7",
     "serve-index": "^1.8.0"
+  },
+  "engines": {
+    "node": "5.5.0"
   }
 }
