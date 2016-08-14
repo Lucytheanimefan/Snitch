@@ -1,9 +1,6 @@
 var file = require('file-system');
 var fs = require('fs');
 
-
-
-
 //var http = require('http');
 var serveIndex = require('serve-index');
 var path = require('path');
