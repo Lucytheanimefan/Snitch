@@ -42,7 +42,7 @@ function replaceAll(str, find, replace) {
 var stream = fs.createWriteStream("data.txt");
 
 function writeDataToFile(data) {
-    fs.appendFile('/public/data.txt', data + "\n", function(err) {
+    fs.appendFile(path.join(__dirname, 'public/')+ 'data.txt', data + "\n", function(err) {
     	console.log(err);
     });
 }
