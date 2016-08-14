@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+    img,
+    form,
+    head,
+    body {
+        text-align: center;
+    }
+    </style>
+    <script>
+    //preload the six images first
+    var face0 = new Image()
+    face0.src = "images/d1.gif"
+    var face1 = new Image()
+    face1.src = "images/d2.gif"
+    var face2 = new Image()
+    face2.src = "images/d3.gif"
+    var face3 = new Image()
+    face3.src = "images/d4.gif"
+    var face4 = new Image()
+    face4.src = "images/d5.gif"
+    var face5 = new Image()
+    face5.src = "images/d6.gif"
+    </script>
+    <img src="images/d1.gif" name="mydice">
+    <form>
+        <input type="button" value="Throw dice!" onClick="throwdice()">
+    </form>
+    <script>
+    var nums = [1, 4, 2, 3, 1, 5, 6, 5, 2, 6, 1];
+
+    function throwdice() {
+
+        //create a random integer between 0 and 5
+        var randomdice = nums.shift();
+        document.images["mydice"].src = "images/d" + randomdice.toString() + ".gif";
+    }
+    </script>
+</head>
+
+</html>
