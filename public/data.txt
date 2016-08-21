@@ -1,1 +1,13 @@
 ip_address, die_version, session_id, time, die_outcome, round
+152.3.71.129,die_1.html,f9ISR,Mon 15:49:7pm 21 Aug 2016,5,1
+152.3.71.129,die_1.html,f9ISR,Mon 15:49:8pm 21 Aug 2016,1,2
+152.3.71.129,die_1.html,f9ISR,Mon 15:49:10pm 21 Aug 2016,2,3
+152.3.71.129,die_1.html,f9ISR,Mon 15:49:7pm 21 Aug 2016,5,1
+152.3.71.129,die_1.html,f9ISR,Mon 15:49:8pm 21 Aug 2016,1,2
+152.3.71.129,die_1.html,f9ISR,Mon 15:49:10pm 21 Aug 2016,2,3
+152.3.71.129,die_1.html,f9ISR,Mon 15:49:7pm 21 Aug 2016,5,1
+152.3.71.129,die_1.html,f9ISR,Mon 15:49:8pm 21 Aug 2016,1,2
+152.3.71.129,die_1.html,f9ISR,Mon 15:49:10pm 21 Aug 2016,2,3
+152.3.71.129,die_1.html,f9ISR,Mon 15:49:7pm 21 Aug 2016,5,1
+152.3.71.129,die_1.html,f9ISR,Mon 15:49:8pm 21 Aug 2016,1,2
+152.3.71.129,die_1.html,f9ISR,Mon 15:49:10pm 21 Aug 2016,2,3

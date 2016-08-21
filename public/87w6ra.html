@@ -30,18 +30,18 @@
         </header>
         <h1>Simply roll the dice</h1>
         <h3>Easy and always available dice</h3>
-        <img src="images/die_1.png" style="width: 50px; height: 50px;" name="mydice">
+        <img src="images/die_3.png" style="width: 50px; height: 50px;" name="mydice">
         <form>
             <input type="button" value="ROLL IT" onClick="throwdice()">
         </form>
         <button style="visibility: hidden; color: white;" onclick="clearLocalStorage()">Clear localStorage</button>
     </body>
     <script>
-    //var timeTracking = {};
-    var nums = [1, 5, 1, 2, 3, 4, 6, 6, 1, 4, 3];
+    var timeTracking = {};
+    var nums = [3, 4, 6, 1, 2, 5, 4, 2, 5, 3];
     var count = 0;
 
-    //get session id
+   //get session id
     var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var stringLength = 5;
     var sessionID = Array.apply(null, new Array(stringLength)).map(function() {
@@ -69,7 +69,7 @@
         };
         */
 
-        die_data = "die_1.html,"+sessionID+","+currentTime+","+randomdice.toString()+","+count.toString();
+        die_data = "die_7.html,"+sessionID+","+currentTime+","+randomdice.toString()+","+count.toString();
         recordIPAddressData();
 
 

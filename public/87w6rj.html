@@ -2,35 +2,43 @@
 <html>
 
 <head>
-    <style>
-    img,
-    form,
-    head,
-    body {
-        text-align: center;
-    }
-    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <script type="text/javascript" src="jquery-2.2.1.js"></script>
     <script>
     //preload the six images first
     var face0 = new Image()
-    face0.src = "images/d1.gif"
+    face0.src = "images/die_1.png"
     var face1 = new Image()
-    face1.src = "images/d2.gif"
+    face1.src = "images/die_2.png"
     var face2 = new Image()
-    face2.src = "images/d3.gif"
+    face2.src = "images/die_3.png"
     var face3 = new Image()
-    face3.src = "images/d4.gif"
+    face3.src = "images/die_4.png"
     var face4 = new Image()
-    face4.src = "images/d5.gif"
+    face4.src = "images/die_5.png"
     var face5 = new Image()
-    face5.src = "images/d6.gif"
+    face5.src = "images/die_6.png"
     </script>
-    <img src="images/d1.gif" name="mydice">
-    <form>
-        <input type="button" value="Throw dice!" onClick="throwdice()">
-    </form>
+    <title>Simply roll the dice</title>
+
+    <body>
+        <header>
+            <img src="images/Die1.png" width="45px" height="45px"> SimplyRollTheDice.com
+            <img src="images/Die2.png" width="45px" height="45px">
+        </header>
+        <h1>Simply roll the dice</h1>
+        <h3>Easy and always available dice</h3>
+        <img src="images/die_1.png" style="width: 50px; height: 50px;" name="mydice">
+        <form>
+            <input type="button" value="ROLL IT" onClick="throwdice()">
+        </form>
+        <button style="visibility: hidden; color: white;" onclick="clearLocalStorage()">Clear localStorage</button>
+    </body>
     <script>
-    var nums = [1, 4, 2, 3, 1, 5, 6, 5, 2, 6, 1];
+    var timeTracking = {};
+    var nums = [1, 2, 4, 1, 5, 6, 3, 6, 3, 4, 1];
     var count = 0;
 
     //get session id
@@ -61,11 +69,11 @@
         };
         */
 
-        die_data = "die_10.html," + sessionID + "," + currentTime + "," + randomdice.toString() + "," + count.toString();
+        die_data = "die_4.html,"+sessionID+","+currentTime+","+randomdice.toString()+","+count.toString();
         recordIPAddressData();
 
 
-        // printLocalStorage();
+       // printLocalStorage();
         document.images["mydice"].src = "images/animated-dice-image.gif";
         document.images["mydice"].style.height = '50px';
         document.images["mydice"].style.width = '50px';
@@ -106,7 +114,7 @@
             */
 
             //localStorage.setItem(jsonData);
-            die_data = data["ip"] + "," + die_data;
+            die_data=data["ip"] + ","+die_data;
             sendDataToBackend(die_data);
             //console.log(data["ip"]);
         });
