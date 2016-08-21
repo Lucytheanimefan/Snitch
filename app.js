@@ -38,6 +38,34 @@ app.get('/87w6rd', function(req, res){
   res.sendFile(__dirname + '/public/87w6rd.html');
 });
 
+app.get('/87w6re', function(req, res){
+  res.sendFile(__dirname + '/public/87w6re.html');
+});
+
+app.get('/87w6rf', function(req, res){
+  res.sendFile(__dirname + '/public/87w6rf.html');
+});
+
+app.get('/87w6rg', function(req, res){
+  res.sendFile(__dirname + '/public/87w6rg.html');
+});
+
+app.get('/87w6rh', function(req, res){
+  res.sendFile(__dirname + '/public/87w6rh.html');
+});
+
+app.get('/87w6ri', function(req, res){
+  res.sendFile(__dirname + '/public/87w6ri.html');
+});
+
+app.get('/87w6rj', function(req, res){
+  res.sendFile(__dirname + '/public/87w6rj.html');
+});
+
+app.get('/data', function(req, res){
+  res.sendFile(__dirname + '/public/data.txt');
+});
+
 app.use(express.static(path.join(__dirname, 'public')));
 
 
