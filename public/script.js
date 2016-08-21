@@ -12,12 +12,10 @@
         var currentTime = timestamp();
         //create a random integer between 0 and 5
         if (count < 9) {
-            randomdice = nums[count + 1];
+            randomdice = nums[count];
         } else {
             randomdice = nums[count % 10];
         }
-
-        count++;
 
         /*
         timeTracking[timestamp()] = {
@@ -25,8 +23,9 @@
             "die number": randomdice
         };
         */
-
+        count++;
         die_data = html_name+","+sessionID+","+currentTime+","+randomdice.toString()+","+count.toString();
+        
         recordIPAddressData();
 
 
