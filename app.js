@@ -19,9 +19,24 @@ app.use(bodyParser.json())
 
 //app.use("/", serveIndex("public"));
 app.get('/', function(req, res){
-  res.sendfile(__dirname + '/public/index.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
+app.get('/87w6ra', function(req, res){
+  res.sendFile(__dirname + '/public/87w6ra.html');
+});
+
+app.get('/87w6rb', function(req, res){
+  res.sendFile(__dirname + '/public/87w6rb.html');
+});
+
+app.get('/87w6rc', function(req, res){
+  res.sendFile(__dirname + '/public/87w6rc.html');
+});
+
+app.get('/87w6rd', function(req, res){
+  res.sendFile(__dirname + '/public/87w6rd.html');
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 
