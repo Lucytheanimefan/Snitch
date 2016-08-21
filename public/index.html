@@ -2,14 +2,32 @@
 <link rel='shortcut icon' href='images/diefav.png' type='image/x-icon'/ >
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<script>
+		function submit(){
+			console.log("Submitted");
+			var button = document.getElementById("uniqueID");
+			console.log(button.value);
+			button.value = "";
+		}
+		</script>
 
-  <title>Die home page</title>
-  <meta name="description" content="Snitching Game">
+	<title>Simply roll the dice</title>
 
-</head>
+	<body>
+		<header><img src="images/Die1.png" width="45px" height="45px"> SimplyRollTheDice.com
+			<img src="images/Die2.png" width="45px" height="45px">
+		</header>
 
-<body>
+		<h1>Input your unique ID:</h1>
+		<input type="text"></body>
+		<input id="uniqueID" type="submit" onfocus="if(this.value.length > 0) this.value='';"></head>
+		</body>
 
-</body>
-</html>
+	</head>
+
+
+	</body>
+	</html>
