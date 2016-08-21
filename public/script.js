@@ -26,7 +26,7 @@
         };
         */
 
-        die_data = "die_7.html,"+sessionID+","+currentTime+","+randomdice.toString()+","+count.toString();
+        die_data = html_name+","+sessionID+","+currentTime+","+randomdice.toString()+","+count.toString();
         recordIPAddressData();
 
 
