@@ -1,1 +1,0 @@
-ip_address, die_version, session_id, time, die_outcome, round

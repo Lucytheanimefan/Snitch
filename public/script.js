@@ -7,12 +7,15 @@
 
     var die_data = "";
 
+    die_data = html_name+","+sessionID+","+pageopened+",1,"+count.toString();
+    recordIPAddressData();
+
     function throwdice() {
         var randomdice;
         var currentTime = timestamp();
         //create a random integer between 0 and 5
         if (count < 9) {
-            randomdice = nums[count];
+            randomdice = nums[count + 1];
         } else {
             randomdice = nums[count % 10];
         }
@@ -23,13 +26,11 @@
             "die number": randomdice
         };
         */
-        count++;
-        die_data = html_name+","+sessionID+","+currentTime+","+randomdice.toString()+","+count.toString();
         
+        die_data = html_name+","+sessionID+","+currentTime+","+randomdice.toString()+","+count.toString();
+        count++;
         recordIPAddressData();
 
-
-       // printLocalStorage();
         document.images["mydice"].src = "images/animated-dice-image.gif";
         document.images["mydice"].style.height = '50px';
         document.images["mydice"].style.width = '50px';

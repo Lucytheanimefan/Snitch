@@ -21,6 +21,27 @@
     face4.src = "images/die_5.png"
     var face5 = new Image()
     face5.src = "images/die_6.png"
+
+    function timestamp() {
+        var d = new Date();
+        var months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+        var days = ['Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun'];
+        var day = days[d.getDay()];
+        var hr = d.getHours();
+        var min = d.getMinutes();
+        if (min < 10) {
+            min = "0" + min;
+        }
+        var ampm = hr < 12 ? "am" : "pm";
+        var date = d.getDate();
+        var month = months[d.getMonth()];
+        var year = d.getFullYear();
+        var seconds = d.getSeconds();
+        var timestamp = day + " " + hr + ":" + min + ":" + seconds + ampm + " " + date + " " + month + " " + year;
+        return timestamp;
+    }
+
+    var pageopened = timestamp();
     </script>
     <title>Simply roll the dice</title>
 
@@ -39,7 +60,7 @@
     </body>
     <script>
     var timeTracking = {};
-    var nums = [2,5,3,6,4,1,6,1,3,4];
+    var nums = [1, 2,5,3,6,4,1,6,1,3,4];
     var count = 0;
     var html_name = "87w6rf";
     </script>
