@@ -7,15 +7,18 @@
 
     var die_data = "";
 
-    die_data = html_name+","+sessionID+","+pageopened+",1,"+count.toString();
-    recordIPAddressData();
+    if (count==0){
+        die_data = html_name+","+sessionID+","+pageopened+",1,"+count.toString();
+        recordIPAddressData();
+    }
 
     function throwdice() {
         var randomdice;
         var currentTime = timestamp();
         //create a random integer between 0 and 5
-        if (count < 9) {
-            randomdice = nums[count + 1];
+        count++:
+        if (count < 11) {
+            randomdice = nums[count];
         } else {
             randomdice = nums[count % 10];
         }
