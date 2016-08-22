@@ -16,13 +16,17 @@
         var randomdice;
         var currentTime = timestamp();
         //create a random integer between 0 and 5
-        count++;
-        if (count < 11) {
+        
+        if (count < 10) {
+            console.log(count);
             randomdice = nums[count];
         } else {
+            console.log(count);
+            console.log(count % 10);
             randomdice = nums[count % 10];
         }
-        console.log(count);
+
+        count++;
         console.log(randomdice);
 
         /*
