@@ -16,7 +16,7 @@
         var randomdice;
         var currentTime = timestamp();
         //create a random integer between 0 and 5
-        count++:
+        count++;
         if (count < 11) {
             randomdice = nums[count];
         } else {
