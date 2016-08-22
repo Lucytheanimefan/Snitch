@@ -8,7 +8,7 @@
     var die_data = "";
 
     if (count==0){
-        die_data = html_name+","+sessionID+","+pageopened+",1,"+count.toString();
+        die_data = html_name+","+sessionID+","+pageopened+","+nums[0]+","+count.toString();
         recordIPAddressData();
     }
 
@@ -16,6 +16,7 @@
         var randomdice;
         var currentTime = timestamp();
         //create a random integer between 0 and 5
+        count++;
         
         if (count < 10) {
             console.log(count);
@@ -26,7 +27,6 @@
             randomdice = nums[count % 10];
         }
 
-        count++;
         console.log(randomdice);
 
         /*
