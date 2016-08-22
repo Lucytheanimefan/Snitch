@@ -22,6 +22,8 @@
         } else {
             randomdice = nums[count % 10];
         }
+        console.log(count);
+        console.log(randomdice);
 
         /*
         timeTracking[timestamp()] = {
@@ -31,7 +33,6 @@
         */
         
         die_data = html_name+","+sessionID+","+currentTime+","+randomdice.toString()+","+count.toString();
-        count++;
         recordIPAddressData();
 
         document.images["mydice"].src = "images/animated-dice-image.gif";
