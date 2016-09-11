@@ -31,13 +31,6 @@
 
         console.log(randomdice);
 
-        /*
-        timeTracking[timestamp()] = {
-            "Count": count,
-            "die number": randomdice
-        };
-        */
-        
         die_data = html_name+","+sessionID+","+currentTime+","+randomdice.toString()+","+count.toString();
         recordIPAddressData();
 
