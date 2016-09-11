@@ -1,47 +1,4 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
-    <script type="text/javascript" src="jquery-2.2.1.js"></script>
-    <script>
-    //preload the six images first
-    var face0 = new Image()
-    face0.src = "images/die_1.png"
-    var face1 = new Image()
-    face1.src = "images/die_2.png"
-    var face2 = new Image()
-    face2.src = "images/die_3.png"
-    var face3 = new Image()
-    face3.src = "images/die_4.png"
-    var face4 = new Image()
-    face4.src = "images/die_5.png"
-    var face5 = new Image()
-    face5.src = "images/die_6.png"
-    </script>
-    <title>Simply roll the dice</title>
-
-    <body>
-        <header>
-            <img src="images/Die1.png" width="45px" height="45px"> SimplyRollTheDice.com
-            <img src="images/Die2.png" width="45px" height="45px">
-        </header>
-        <h1>Simply roll the dice</h1>
-        <h3>Easy and always available dice</h3>
-        <img src="images/die_1.png" style="width: 50px; height: 50px;" name="mydice">
-        <form>
-            <input type="button" value="ROLL IT" onClick="throwdice()">
-        </form>
-        <button style="visibility: hidden; color: white;" onclick="clearLocalStorage()">Clear localStorage</button>
-    </body>
-    <script>
-    var timeTracking = {};
-    var nums = [1,6,3,5,2,4,1,4,1,6,2];
-    var count = 0;
-
-    //get session id
+//get session id
     var possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
     var stringLength = 5;
     var sessionID = Array.apply(null, new Array(stringLength)).map(function() {
@@ -50,17 +7,27 @@
 
     var die_data = "";
 
+    if (count==0){
+        die_data = html_name+","+sessionID+","+pageopened+","+nums[0]+","+count.toString();
+        recordIPAddressData();
+    }
+
     function throwdice() {
         var randomdice;
         var currentTime = timestamp();
         //create a random integer between 0 and 5
-        if (count < 9) {
-            randomdice = nums[count + 1];
+        count++;
+        
+        if (count < 10) {
+            console.log(count);
+            randomdice = nums[count];
         } else {
+            console.log(count);
+            console.log(count % 10);
             randomdice = nums[count % 10];
         }
 
-        count++;
+        console.log(randomdice);
 
         /*
         timeTracking[timestamp()] = {
@@ -68,12 +35,10 @@
             "die number": randomdice
         };
         */
-
-        die_data = "die_5.html,"+sessionID+","+currentTime+","+randomdice.toString()+","+count.toString();
+        
+        die_data = html_name+","+sessionID+","+currentTime+","+randomdice.toString()+","+count.toString();
         recordIPAddressData();
 
-
-       // printLocalStorage();
         document.images["mydice"].src = "images/animated-dice-image.gif";
         document.images["mydice"].style.height = '50px';
         document.images["mydice"].style.width = '50px';
@@ -146,7 +111,3 @@
         });
 
     }
-    </script>
-</head>
-
-</html>

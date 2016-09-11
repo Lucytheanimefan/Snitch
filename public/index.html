@@ -1,26 +1,33 @@
 <!doctype html>
-
+<link rel='shortcut icon' href='images/diefav.png' type='image/x-icon'/ >
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Montserrat">
+	<script>
+		function submit(){
+			console.log("Submitted");
+			var button = document.getElementById("uniqueID");
+			console.log(button.value);
+			button.value = "";
+		}
+		</script>
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="Snitching Game">
+	<title>Simply roll the dice</title>
 
-</head>
+	<body>
+		<header><img src="images/Die1.png" width="45px" height="45px"> SimplyRollTheDice.com
+			<img src="images/Die2.png" width="45px" height="45px">
+		</header>
 
-<body>
-<a href="test_1.html">test_1.html</a>
-<script>
+		<h1>Enter your membership number:</h1>
+		<input type="text"></body>
+		<input id="uniqueID" type="submit" onfocus="if(this.value.length > 0) this.value='';"></head>
+		</body>
 
-for (var i=0; i<10; i++){
-	var div = document.createElement("div");
-	var link = document.createElement("a");
-	link.href="die_"+(i+1).toString()+".html";
-	link.innerHTML="Die version "+(i+1).toString();
-	div.appendChild(link);
-	document.body.appendChild(div);
-}
-</script>
-</body>
-</html>
+	</head>
+
+
+	</body>
+	</html>
