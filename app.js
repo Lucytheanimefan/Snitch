@@ -9,6 +9,9 @@ var express = require('express')
 var app = express();
 var bodyParser = require('body-parser')
 
+//write the first row (the column titles)
+firstRow="ip_address, die_version, session_id, time, die_outcome, round";
+writeDataToFile(firstRow);
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
