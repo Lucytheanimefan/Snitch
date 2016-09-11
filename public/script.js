@@ -13,6 +13,8 @@
     }
 
     function throwdice() {
+        console.log("click");
+        document.getElementsByTagName("input")[0].disabled=true;
         var randomdice;
         var currentTime = timestamp();
         //create a random integer between 0 and 5
@@ -45,6 +47,7 @@
 
         setTimeout(function() {
             document.images["mydice"].src = "images/die_" + randomdice.toString() + ".png";
+            document.getElementsByTagName("input")[0].disabled=false;
         }, 1000);
 
     }
